@@ -20,7 +20,7 @@ def fresnel_diffraction(image, z, wavelength):
     random_phase = np.random.rand(height, width) * (2) * np.pi  # 生成[0, 2π)之间的随机相位
     spectrum *= np.exp(1j * random_phase)  # 应用随机相位
 
-    # 应用菲涅尔衍射传递函数
+    
     U_out = ifft2(spectrum * H)  # 计算逆傅里叶变换
     return np.abs(U_out)  # 返回绝对值（幅度）
 
