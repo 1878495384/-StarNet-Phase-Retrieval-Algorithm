@@ -5,7 +5,7 @@ from scipy.fft import fft2, ifft2
 from PIL import Image
 
 
-# 菲涅尔衍射计算
+# 角谱衍射计算
 def fresnel_diffraction(image, z, wavelength):
     k = 2 * np.pi / wavelength  # 波数
     height, width = image.shape
